@@ -69,7 +69,9 @@ Backbone.Validation = (function(_){
           val instanceof Date ||
           val instanceof RegExp ||
           val instanceof Backbone.Model ||
-          val instanceof Backbone.Collection)
+          val instanceof Backbone.Collection ||
+          val instanceof Parse.Object ||
+          val instanceof Parse.Collection)
         ) {
           flatten(val, into, prefix + key + '.');
         }
